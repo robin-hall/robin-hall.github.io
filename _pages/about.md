@@ -8,7 +8,7 @@ profile:
   align: right
   image: headshot.png
   image_circular: false # crops the image to make it circular
-  more_info: >
+  # more_info: >
    # <p>555 your office number</p>
   #  <p>123 your address street</p>
    # <p>Your City, State 12345</p>
@@ -26,6 +26,12 @@ latest_posts:
   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
+<style>
+  a {
+    color: blue;
+  }
+</style>
+# <a href="https://example.com" style="color: red;">Red Link</a>
 
 Hello! My name is Robin Hall, I am an Assitant Professor of Electromechanical Engineering at [Merrimack College](https://www.merrimack.edu/). I am the PI of the RUNE Lab (Robots for Unmanned Natural Exploration)
 
