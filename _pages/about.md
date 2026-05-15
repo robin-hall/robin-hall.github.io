@@ -37,6 +37,8 @@ My research focuses on bio-inspired robotics, novel robotic manufacturing, and a
 <span style="color: #d71920; font-weight: 500;">
 I am actively recruiting motivated undergraduate and Masters students!
 </span>
-If you are passionate about building robots and coding intelligence, please email me at <code>hallrf@merrimack.edu</code>.
+If you are passionate about building robots and coding intelligence, please email me at <a href="mailto:hallrf@merrimack.edu" style="color: blue;">
+  <code>hallrf@merrimack.edu</code>
+</a>.
 
 <hr>
