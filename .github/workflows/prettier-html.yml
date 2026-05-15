@@ -3,12 +3,15 @@ name: Prettify gh-pages
 on:
   workflow_dispatch:
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   format:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout gh-pages branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: gh-pages
 
@@ -16,13 +19,15 @@ jobs:
         run: find . -type f -name "*.html" -exec sed -i 's/<\/source>//g' {} +
 
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
 
       - name: Install Prettier
         run: npm install -g prettier
 
       - name: Check for Prettier
-        run: npx prettier --version || echo "Prettier not found"
+        run: npx prettier --version
 
       - name: Run Prettier on HTML files
         run: npx prettier --write '**/*.html'
