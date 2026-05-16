@@ -81,11 +81,6 @@
           }
         }
 
-        > em {
-          border-bottom: 1px solid;
-          font-style: normal;
-        }
-
         > span.more-authors {
           color: var(--global-text-color-light);
           border-bottom: 1px dashed var(--global-text-color-light);
@@ -187,13 +182,19 @@
   color: var(--global-theme-color);
 }
 
-.my-name {
-  text-decoration: underline;
+.publications ol.bibliography li .author .my-name {
+  border-bottom: 1px solid;
   font-style: normal;
 }
 
-.pub-video-link,
-.pub-doi-link {
+.publications ol.bibliography li .links a.pub-video-link,
+.publications ol.bibliography li .links a.pub-doi-link {
   color: #0047cc !important;
   border-color: #0047cc !important;
+}
+
+.publications ol.bibliography li .links a.pub-video-link:hover,
+.publications ol.bibliography li .links a.pub-doi-link:hover {
+  color: #003399 !important;
+  border-color: #003399 !important;
 }
