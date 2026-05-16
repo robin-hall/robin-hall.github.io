@@ -16,6 +16,25 @@ announcements:
   scrollable: true
   limit: 5
 
+custom_sections:
+  - title: teaching
+    content: |
+      Add your teaching text here.
+
+      You can use Markdown links, like [Merrimack College](https://www.merrimack.edu/).
+
+  - title: service
+    content: |
+      Add your service text here.
+
+      Example: reviewer roles, committee work, conference service, mentoring, etc.
+
+  - title: outreach
+    content: |
+      Add your outreach text here.
+
+      Example: K-12 robotics demos, public science events, community workshops, etc.
+    
 latest_posts:
   enabled: false
   scrollable: true
