@@ -187,14 +187,20 @@
   font-style: normal;
 }
 
-.publications ol.bibliography li .links a.pub-video-link,
-.publications ol.bibliography li .links a.pub-doi-link {
+.publications ol.bibliography li .periodical em {
+  font-style: italic;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.publications ol.bibliography li .links a.btn.pub-video-link,
+.publications ol.bibliography li .links a.btn.pub-doi-link {
   color: #0047cc !important;
   border-color: #0047cc !important;
 }
 
-.publications ol.bibliography li .links a.pub-video-link:hover,
-.publications ol.bibliography li .links a.pub-doi-link:hover {
+.publications ol.bibliography li .links a.btn.pub-video-link:hover,
+.publications ol.bibliography li .links a.btn.pub-doi-link:hover {
   color: #003399 !important;
   border-color: #003399 !important;
 }
