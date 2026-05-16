@@ -440,18 +440,18 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
           section: "News",},{id: "news-our-paper-a-soft-robot-for-agile-and-efficient-marine-locomotion-has-been-accepted-for-publication-in-npj-robotics",
           title: 'Our paper, “A Soft Robot for Agile and Efficient Marine Locomotion,” has been...',
           description: "",
-          section: "News",},{id: "projects-project-1",
+          section: "News",},{id: "news-announcement-2",
+          title: 'Announcement_2',
+          description: "",
+          section: "News",handler: () => {
+              window.location.href = "/news/announcement_2/";
+            },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
           section: "Projects",handler: () => {
