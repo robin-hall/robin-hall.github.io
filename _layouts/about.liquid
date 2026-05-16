@@ -59,10 +59,22 @@ layout: default
     <!-- Selected papers -->
     {% if page.selected_papers %}
       <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Publications</a>
       </h2>
       {% include selected_papers.liquid %}
     {% endif %}
+
+{% if page.custom_sections %}
+  {% for section in page.custom_sections %}
+    <hr>
+
+    <h2>{{ section.title | capitalize }}</h2>
+
+    <div class="custom-about-section">
+      {{ section.content | markdownify }}
+    </div>
+  {% endfor %}
+{% endif %}
 
     <!-- Social -->
     {% if page.social %}
