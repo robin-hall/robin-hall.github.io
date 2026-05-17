@@ -220,7 +220,13 @@
 .citation-number {
   color: var(--global-theme-color);
 }
-
+.publications ol.bibliography li .author {
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: normal;
+  line-height: 1.35;
+}
 /*******************************************************************************
  * Mobile layout
  ******************************************************************************/
