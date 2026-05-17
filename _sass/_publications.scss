@@ -37,35 +37,7 @@
     margin-top: 0;
 
     li {
-      margin-bottom: 1rem;
-
-      .preview {
-        display: inline-block;
-      }
-
-      .abbr {
-        margin-bottom: 0.5rem;
-
-        abbr {
-          display: inline-block;
-          background-color: var(--global-theme-color);
-          margin-bottom: 0.5rem;
-          color: var(--global-card-bg-color) !important;
-
-          a {
-            color: white;
-
-            &:hover {
-              text-decoration: none;
-            }
-          }
-        }
-
-        .award {
-          color: var(--global-theme-color) !important;
-          border: 1px solid var(--global-theme-color);
-        }
-      }
+      margin-bottom: 2rem;
 
       .title {
         font-weight: bolder;
@@ -81,6 +53,11 @@
           }
         }
 
+        .my-name {
+          border-bottom: 1px solid;
+          font-style: normal;
+        }
+
         > span.more-authors {
           color: var(--global-text-color-light);
           border-bottom: 1px dashed var(--global-text-color-light);
@@ -93,7 +70,15 @@
         }
       }
 
+      .periodical em {
+        font-style: italic;
+        text-decoration: none;
+        border-bottom: none;
+      }
+
       .links {
+        margin-top: 0.4rem;
+
         a.btn {
           color: var(--global-text-color);
           border: 1px solid var(--global-text-color);
@@ -102,19 +87,33 @@
           padding-top: 0.25rem;
           padding-bottom: 0.25rem;
           margin-left: 0;
+          margin-right: 0.35rem;
 
           &:hover {
             color: var(--global-theme-color);
             border-color: var(--global-theme-color);
           }
         }
+
         a.award.btn {
           border-color: var(--global-highlight-color);
+        }
+
+        a.btn.pub-video-link,
+        a.btn.pub-doi-link {
+          color: #0047cc !important;
+          border-color: #0047cc !important;
+
+          &:hover {
+            color: #003399 !important;
+            border-color: #003399 !important;
+          }
         }
       }
 
       .badges {
         padding-bottom: 0.5rem;
+
         span {
           display: inline-block;
           color: v.$black-color;
@@ -130,13 +129,9 @@
 
       .hidden {
         font-size: 0.875rem;
-        max-height: 0px;
+        max-height: 0;
         overflow: hidden;
         text-align: justify;
-        transition-property: 0.15s ease;
-        -moz-transition: 0.15s ease;
-        -ms-transition: 0.15s ease;
-        -o-transition: 0.15s ease;
         transition: all 0.15s ease;
 
         p {
@@ -153,10 +148,6 @@
 
       .hidden.open {
         max-height: 100em;
-        transition-property: 0.15s ease;
-        -moz-transition: 0.15s ease;
-        -ms-transition: 0.15s ease;
-        -o-transition: 0.15s ease;
         transition: all 0.15s ease;
       }
 
@@ -168,13 +159,61 @@
         border-color: var(--global-text-color);
       }
     }
+
     div.award.hidden {
       border: dashed 1px var(--global-bg-color);
     }
+
     div.award.hidden.open {
       border-color: var(--global-highlight-color);
     }
   }
+}
+
+/*******************************************************************************
+ * Custom publication row layout
+ ******************************************************************************/
+
+.publications ol.bibliography li .pub-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.publications ol.bibliography li .pub-media {
+  flex: 0 0 300px;
+  width: 300px;
+  max-width: 300px;
+}
+
+.publications ol.bibliography li .pub-info {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* Force images, GIFs, and videos to share the same thumbnail size */
+.publications ol.bibliography li .pub-preview,
+.publications ol.bibliography li img.pub-preview,
+.publications ol.bibliography li video.pub-preview {
+  width: 300px !important;
+  max-width: 300px !important;
+  height: 180px !important;
+  max-height: 180px !important;
+  object-fit: cover;
+  display: block;
+}
+
+/* Defensive rule in case any wrapper or theme image rule tries to expand media */
+.publications ol.bibliography li .pub-media img,
+.publications ol.bibliography li .pub-media video {
+  width: 300px !important;
+  max-width: 300px !important;
+  height: 180px !important;
+  max-height: 180px !important;
+  object-fit: cover;
+  display: block;
 }
 
 .citation,
@@ -182,47 +221,30 @@
   color: var(--global-theme-color);
 }
 
-.publications ol.bibliography li .author .my-name {
-  border-bottom: 1px solid;
-  font-style: normal;
-}
+/*******************************************************************************
+ * Mobile layout
+ ******************************************************************************/
 
-.publications ol.bibliography li .periodical em {
-  font-style: italic;
-  text-decoration: none;
-  border-bottom: none;
-}
+@media (max-width: 576px) {
+  .publications ol.bibliography li .pub-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
 
-.publications ol.bibliography li .links a.btn.pub-video-link,
-.publications ol.bibliography li .links a.btn.pub-doi-link {
-  color: #0047cc !important;
-  border-color: #0047cc !important;
-}
+  .publications ol.bibliography li .pub-media {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+  }
 
-.publications ol.bibliography li .links a.btn.pub-video-link:hover,
-.publications ol.bibliography li .links a.btn.pub-doi-link:hover {
-  color: #003399 !important;
-  border-color: #003399 !important;
-}
-.publications ol.bibliography li .pub-row {
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.publications ol.bibliography li .pub-media {
-  flex: 0 0 300px;
-}
-
-.publications ol.bibliography li .pub-preview {
-  width: 300px !important;
-  height: 180px !important;
-  object-fit: cover;
-  display: block;
-}
-
-.publications ol.bibliography li .pub-info {
-  flex: 1;
-  min-width: 0;
+  .publications ol.bibliography li .pub-preview,
+  .publications ol.bibliography li img.pub-preview,
+  .publications ol.bibliography li video.pub-preview,
+  .publications ol.bibliography li .pub-media img,
+  .publications ol.bibliography li .pub-media video {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+  }
 }
