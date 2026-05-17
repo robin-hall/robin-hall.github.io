@@ -26,6 +26,7 @@ custom_sections:
 
   - title: service
     content: |
+      - **Director of the Merrimack Makerspaces:** 2025-present 
       - **Reviewer:** RA-L, ICRA, RoboSoft
 
   - title: outreach
@@ -34,6 +35,7 @@ custom_sections:
 
       - **[2024]** Hand animated explanation of Soft Robotics – [What is Soft Robotics?](https://youtu.be/UsBsoL6iw-8)
       - **[2023]** Salamander in the Major Taylor George Street Challenge – [Promotional Video](https://youtu.be/StbcuEOdA08)
+      - **[2022]** Combating Climate Change With a Soft Robotic Fish – [RoboHub](https://robohub.org/tetherless-open-water-swimming/)
     
 latest_posts:
   enabled: false
