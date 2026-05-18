@@ -242,10 +242,14 @@
   font-weight: 700;
   color: var(--global-text-color);
 }
-.lab-navbar-logo {
+#navbar .lab-navbar-logo {
+  height: 80px;
+  width: auto;
+  display: block;
   transition: transform 0.2s ease;
+  transform-origin: center center;
 }
 
-.lab-navbar-link:hover .lab-navbar-logo {
+#navbar .lab-navbar-link:hover .lab-navbar-logo {
   transform: scale(1.08);
 }
